@@ -1,0 +1,9 @@
+FichasProfClaudia/
+*.log
+*.o
+*.pyc
+*.class
+bangbang
+*/bin/*
+projeto_fase1
+*.dSYM
