@@ -3,34 +3,34 @@
 
     O que faz este programa?
 */
-
-// C program for the above approach
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
- 
-// Function that generate a number in
-// the range [1, N] and checks if the
-// generated number is the same as the
-// guessed number or not
+
+// P: Que faz este procedimento? 
+// R: Procedimento que gera um número
+// no intervalo [1, N] e verifica se o
+// número é o mesmo que
+// o palpite (guess) do utilizador ou não
 void guess(int N)
 {
-    int number, guess, numberofguess = 0;
+    int numero, guess, numberofguess = 0;
  
-    //Seed random number generator
+    //'Semente' para o gerador do número aleatório
     srand(time(NULL));
  
-    // Generate a random number
-    number = rand() % N;
+    // Gera número aleatório
+    // P: Em que variável fica guardado? Para que serve o '%'?
+    numero = rand() % N;
  
-    printf("Guess a number between"
-           " 1 and %d\n",
+    printf("Adivinha o número entre"
+           " 1 e %d\n",
            N);
  
-    // Using a do-while loop that will
-    // work until user guesses
-    // the correct number
+    // Usar um ciclo do-while que funcionará
+    // até que o utilizador adivinhe
+    // o número certo
     do {
  
         if (numberofguess > 9) {
@@ -38,48 +38,44 @@ void guess(int N)
             break;
         }
  
-        // Input by user
+        // Input do utilizador
         scanf("%d", &guess);
- 
-        // When user guesses lower
-        // than actual number
-        if (guess > number)
- 
+        // Que faz este ramo da condição?
+        // R: Quando o palpite (guess) do utilizador 
+        // é menor que o número 
+        if (guess > numero) 
         {
-            printf("Lower number "
-                   "please!\n");
+            printf("Menor "
+                   "por favor!\n");
             numberofguess++;
         }
- 
-        // When user guesses higher
-        // than actual number
-        else if (number > guess)
- 
+        // Que faz este ramo da condição?
+        // R: Quando o palpite (guess) do utilizador 
+        // é maior que o número 
+        else if (numero > guess)
         {
-            printf("Higher number"
-                   " please!\n");
+            printf("Maior"
+                   " por favor!\n");
             numberofguess++;
         }
- 
-        // Printing number of times
-        // user has taken to guess
-        // the number
+        // O que faz esta parte do código?
+        // R: Imprime o número de vezes que o utilizador previsou
+        // até adivinhar o número 
         else
-            printf("You guessed the"
-                   " number in %d "
-                   "attempts!\n",
-                   numberofguess);
+            printf("Adivinhaste o número em %d "
+                   "tentativas!\n", numberofguess);
  
-    } while (guess != number);
+    } while (guess != numero);
 }
  
-// Driver Code
-int main()
+
+
+// Código que lança o jogo
+main()
 {
     int N = 100;
  
-    // Function call
+    // Chamar função
     guess(N);
- 
-    return 0;
 }
+
