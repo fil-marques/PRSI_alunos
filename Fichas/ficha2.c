@@ -19,11 +19,12 @@ void imprime_tesoura(){
 main(){
     srand(time(NULL)); /* Porquê o 'time' ? */
 
-    int res = rand() % 3; /* O que faz esta linha de código? Quais os valores possíveis de 'res' */
+    int res = rand() % 2; /* O que faz esta linha de código? Quais os valores possíveis de 'res' */
 
     printf("\tResultado: %d\n", res); /* Que resultados poderão ocorrer aqui? */
 
-    /* Modifica a mensagem que é impressa para outra à tua escolha. */
+    /* Modifica a mensagem que é impressa para outra à tua escolha.
+        E altera a instrução 'rand' que deve ser chamada numa função gera_numero() antes do main() */
 
     /* Re-utilizando o código, recria o jogo Pedra, Papel, Tesoura numa função jogo() em
     separado */
