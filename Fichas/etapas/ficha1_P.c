@@ -29,7 +29,7 @@ int main() {
 
     quantidade_paineis = (consumo_diario * 1000) / (potencia_painel * horas_exposicao_solar);
 
-    printf("Precisará de adquirir aproximadamente %.0f painéis \n"
+    printf("\t*Precisará de adquirir aproximadamente %.0f painéis \n"
         "solares para suprir a sua casa.\n", quantidade_paineis);
 
     return 0;
