@@ -9,6 +9,7 @@ int consumo_diario;
 float potencia_painel;
 float quantidade_paineis;
 float area_necessaria;
+float custo;
 
 void pedirConsumoDiario() {
     printf("\tDigite o consumo diário de \n"
@@ -30,12 +31,19 @@ void calcularArea() {
     area_necessaria = quantidade_paineis * 2;
 }
 
+void calcularOrcamento() {
+    custo = quantidade_paineis * potencia_painel * 1; //custo 1 eur/watt
+}
+
 void imprimirResultado() {
     printf("\t*Precisará de adquirir aproximadamente %.0f painéis \n"
         "solares para suprir a sua casa.\n", quantidade_paineis);
     
     printf("\t*Precisará de aproximadamente %.2f m² \n"
         "de área para instalar esses painéis.\n", area_necessaria);
+
+    printf("\t*A sua instalação terá um custo de\n"
+        "aproximadamente %.2f euros.\n", custo);
 }
 
 int main() {
@@ -46,6 +54,7 @@ int main() {
 
     calcularQuantidadePaineis();
     calcularArea();
+    calcularOrcamento();
 
     imprimirResultado();
 
